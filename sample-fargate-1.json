@@ -1,0 +1,31 @@
+{
+    "family": "sample-fargate-1",
+    "containerDefinitions": [
+        {
+            "name": "patient_survival",
+            "image": "171756463102.dkr.ecr.ap-south-1.amazonaws.com/patient_survival_predict:latest",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "containerPort": 7860,
+                    "hostPort": 7860,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "systemControls": []
+        }
+    ],
+    "executionRoleArn": "arn:aws:iam::171756463102:role/admin",
+    "networkMode": "awsvpc",
+    "volumes": [],
+    "placementConstraints": [],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "1024",
+    "memory": "3072"
+}
